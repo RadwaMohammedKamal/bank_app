@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../viewmodel/database/local/shared_helper.dart';
-import '../components/navigate.dart';
 
 const Color rmaincolor = Color(0xff616AE6);
 
