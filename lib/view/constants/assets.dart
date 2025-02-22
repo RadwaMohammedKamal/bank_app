@@ -1,0 +1,1 @@
+//const String logoSplashSvg = 'assets/icons/logo2.svg';
