@@ -1,5 +1,4 @@
 import 'package:bank_app/view/constants/color.dart';
-import 'package:bank_app/view/screens/home_screen.dart';
 import 'package:bank_app/view/screens/register_screen.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +6,7 @@ import 'package:flutter/material.dart';
 import '../components/custom_button.dart';
 import '../components/custom_text_form_field.dart';
 import '../components/navigate.dart';
+import 'BottomNav.dart';
 
 class LoginScreen extends StatelessWidget {
   var emailController = TextEditingController();
@@ -71,12 +71,11 @@ class LoginScreen extends StatelessWidget {
                       text: 'LOGIN',
                       onTap: () {
                         if (formKey.currentState!.validate()) {
-                          navigateAndFinish(context, HomeScreen());
+                          navigateAndFinish(context, BottomNav());
                         }
                       },
                     ),
-                    fallback: (context) =>
-                        Center(child: CircularProgressIndicator()),
+                    fallback: (context) => Center(child: CircularProgressIndicator()),
                   ),
                   SizedBox(height: 15),
                   Row(
