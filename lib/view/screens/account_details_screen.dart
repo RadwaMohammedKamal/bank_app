@@ -31,20 +31,20 @@ class AccountDetailsScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-         const  SizedBox(height: 30,),
+          const SizedBox(height: 30),
           CustomDetailsCard(
             bankName: 'Bank maser',
             balance: '5000',
             percentage: '15',
             start: '2-1-2025',
-            end:'2-1-2025',
+            end: '2-1-2025',
           ),
           // chart
           const Spacer(),
           Padding(
             padding: const EdgeInsets.all(20),
             child: SizedBox(
-              height: 400,
+              height: 300,
               child: PieChart(
                 PieChartData(
                   sections: [
@@ -52,7 +52,8 @@ class AccountDetailsScreen extends StatelessWidget {
                       value: 50,
                       title: "Saved Money",
                       color: Colors.green,
-                      radius: 80, // تكبير الحجم
+                      radius: 80,
+                      // تكبير الحجم
                       titleStyle: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -63,7 +64,8 @@ class AccountDetailsScreen extends StatelessWidget {
                       value: 30,
                       title: "Spent Money",
                       color: Colors.red,
-                      radius: 80, // تكبير الحجم
+                      radius: 80,
+                      // تكبير الحجم
                       titleStyle: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -74,7 +76,7 @@ class AccountDetailsScreen extends StatelessWidget {
                       value: 20,
                       title: "Balance",
                       color: Colors.orange,
-                      radius: 80, // تكبير الحجم
+                      radius: 80,
                       titleStyle: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
@@ -96,9 +98,16 @@ class AccountDetailsScreen extends StatelessWidget {
 
 class CustomDetailsCard extends StatelessWidget {
   const CustomDetailsCard({
-    super.key, this.bankName, this.balance,this.percentage,this.start,this.end,
+    super.key,
+    this.bankName,
+    this.balance,
+    this.percentage,
+    this.start,
+    this.end,
   });
-  final String? bankName, balance,percentage,start,end;
+
+  final String? bankName, balance, percentage, start, end;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -138,7 +147,7 @@ class CustomDetailsCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                     Text(
+                    Text(
                       "$bankName",
                       style: TextStyle(
                         fontSize: 25,
@@ -148,7 +157,7 @@ class CustomDetailsCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                 Row(
+                Row(
                   children: [
                     Column(
                       children: [
@@ -190,7 +199,7 @@ class CustomDetailsCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                 Row(
+                Row(
                   children: [
                     Column(
                       children: [
